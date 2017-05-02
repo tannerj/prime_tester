@@ -23,9 +23,7 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
+  spec.files         = Dir["lib/**/*", "bin/**"]
   spec.bindir        = "bin"
   spec.executables   = ["prime"]
   spec.require_paths = ["lib"]
