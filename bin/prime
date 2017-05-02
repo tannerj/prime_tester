@@ -1,0 +1,11 @@
+#! /usr/bin/env ruby
+require_relative "../lib/prime_tester"
+
+primes = []
+(2..1000).each do |n|
+  primes << n if PrimeTester.prime? n
+end
+
+primes.each do |prime|
+  puts "#{prime}"
+end
